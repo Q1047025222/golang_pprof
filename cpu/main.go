@@ -28,8 +28,8 @@ func main() {
 
 // 一段性能问题代码
 func joinSlice() []int {
-	//var slices []int
 	num := 10000000
+	//var slices []int
 	slices := make([]int, 0, num)
 	for i := 0; i < num; i++ {
 		// 故意造成多次切片添加，由于每次操作可能会有内存重新分配和移动，性能较低

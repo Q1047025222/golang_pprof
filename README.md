@@ -15,22 +15,21 @@ Go语言工具链中的 go pprof 可以帮助开发者快速分析及定位各�
 ## CPU性能分析
 
 + 在cpu文件夹下执行如下命令，加 -cpu ture 是为了开启CPU profile分析，生成cpu.pprof文件
-```
+```bash
 go run main.go -cpu true
-
 ```
 + 在cpu文件夹下执行如下命令，加 -cpu ture 是为了开启CPU profile分析，生成cpu.pprof文件
-```
+```bash
 go run main.go -cpu true
 
 ```
 + 对生成cpu.pprof文件进行分析，执行如下命令
-```
+```bash
 go tool pprof cpu.pprof
 ```
 
 + 进入交互交互界面，输入top，获取分析结果
-```
+```bash
 Type: cpu
 Time: May 24, 2020 at 2:02pm (CST)
 Duration: 607.77ms, Total samples = 520ms (85.56%)
@@ -62,7 +61,7 @@ cum%：当前函数加上调用当前函数的函数占用CPU的总耗时百分�
 ```
 
 + 现在对耗时长的函数详细分析，执行命令 list joinSlice
-```
+```bash
 (pprof) list joinSlice
 Total: 520ms
 ROUTINE ======================== main.joinSlice in /Users/wutianxiang/uniontech/golang_pprof/cpu/main.go
